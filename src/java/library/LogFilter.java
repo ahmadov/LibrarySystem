@@ -13,16 +13,12 @@ import javax.servlet.http.HttpSession;
 
 /**
  *
- * @author raminorujov
+ * @author elmi
  */
-
-
 public class LogFilter implements Filter {
 
     private static final boolean debug = true;
-// The filter configuration object we are associated with. If
-// this value is null, this filter instance is not currently
-// configured.
+
     private FilterConfig filterConfig = null;
 
     public LogFilter() {
@@ -53,24 +49,13 @@ public class LogFilter implements Filter {
         return (this.filterConfig);
     }
 
-    /**
-     * Set the filter configuration object for this filter.
-     *     
-* @param filterConfig The filter configuration object
-     */
     public void setFilterConfig(FilterConfig filterConfig) {
         this.filterConfig = filterConfig;
     }
 
-    /**
-     * Destroy method for this filter
-     */
     public void destroy() {
     }
 
-    /**
-     * Init method for this filter
-     */
     public void init(FilterConfig filterConfig) {
         this.filterConfig = filterConfig;
     }
