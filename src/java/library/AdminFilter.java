@@ -37,6 +37,9 @@ public class AdminFilter implements Filter {
             String[] accessed_IPs = filterConfig.getInitParameter("whitelist").split(",");
             boolean canAccessByTime = false , canAccessByIP = false;
             
+            if (session.getAttribute("admin") == null || (Boolean)session.getAttribute("admin") == false)
+                res.sendRedirect("index.jsp");
+            
             String IP = req.getRemoteAddr();
             for (String accessed_IP : accessed_IPs) 
                 if (IP.equals(accessed_IP)) {

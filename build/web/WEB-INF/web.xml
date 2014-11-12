@@ -16,6 +16,14 @@
             <param-value>9:30-18:00</param-value>
         </init-param>
     </filter>
+    <filter>
+        <filter-name>VIPFilter</filter-name>
+        <filter-class>library.VIPFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>VIPFilter</filter-name>
+        <url-pattern>/vip.jsp</url-pattern>
+    </filter-mapping>
     <filter-mapping>
         <filter-name>LogFilter</filter-name>
         <url-pattern>/admin.jsp</url-pattern>
